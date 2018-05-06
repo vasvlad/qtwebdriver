@@ -50,8 +50,8 @@ do
   then
     export ANDROID_ARCH=arm
     export ANDROID_LIB_ARCH=armeabi-v7a
-    export ANDROID_TOOLCHAIN_VERSION=4.7
-    export ANDROID_TOOLCHAIN=arm-linux-androideabi-4.7
+    export ANDROID_TOOLCHAIN_VERSION=4.9
+    export ANDROID_TOOLCHAIN=arm-linux-androideabi-4.9
     export ANDROID_TOOL_PREFIX=arm-linux-androideabi
     export ANDROID_TARGET=android-10
     export ANDROID_TOOLCHAIN_PREFIX=arm-linux-androideabi
