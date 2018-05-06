@@ -29,7 +29,7 @@ then
   export ANDROID_NDK_ROOT=/opt/android/android-ndk-r8e
 fi
 
-if [ -z $ANDROID_SDK_ROOT]; 
+if [ -z $ANDROID_SDK_ROOT];
 then
   export ANDROID_SDK_ROOT=/opt/android/adt-bundle-linux-x86-20130522/sdk
 fi
@@ -40,8 +40,8 @@ do
   then
     export ANDROID_ARCH=x86
     export ANDROID_LIB_ARCH=x86
-    export ANDROID_TOOLCHAIN_VERSION=4.7
-    export ANDROID_TOOLCHAIN=x86-4.7
+    export ANDROID_TOOLCHAIN_VERSION=4.9
+    export ANDROID_TOOLCHAIN=x86-4.9
     export ANDROID_TOOL_PREFIX=i686-linux-android
     export ANDROID_TARGET=android-10
     export ANDROID_TOOLCHAIN_PREFIX=x86
