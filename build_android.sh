@@ -5,10 +5,10 @@ archs=$1
 
 if [ -z $QT_DIR ]
 then
-  export QT_DIR=/opt/Qt5.2/5.2.0
+  export QT_DIR=/opt/Qt/5.9.2
 fi
 
-export QT_VERSION=5.2.0
+export QT_VERSION=5.9.2
 export ANDROID_PACKAGE=org.webdriver.qt
 export ANDROID_JAVA=`pwd`/platform/android/java/
 export ANDROID_APP_NAME=AndroidWD
