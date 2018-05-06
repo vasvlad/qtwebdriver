@@ -108,7 +108,7 @@ private:
 
 private:
     int _deviceDescriptor;
-    Logger *_logger;
+    Logger1 *_logger;
     bool _isReady;
 
     static UInputManager* _instance;

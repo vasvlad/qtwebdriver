@@ -37,7 +37,7 @@ Error* CreateBadInputError(const std::string& name,
 
 QProxyCapabilitiesParser::QProxyCapabilitiesParser(
             const base::DictionaryValue* proxy_dict,
-            const Logger& logger,
+            const Logger1& logger,
             QNetworkProxy* proxy) 
             : dict_(proxy_dict),
               logger_(logger),

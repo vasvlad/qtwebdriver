@@ -54,7 +54,7 @@ public:
     static QWindow* getQWindowView(Session* session, const ViewId& viewId);
     static QQuickWindow* getQMLView(Session* session, const ViewId& viewId);
     static QQmlEngine* getQMLEngine(QQuickWindow* qquickWindow);
-    static void setSource(const Logger& logger, const QUrl &url, bool sync, QQuickWindow* qquickWindow);
+    static void setSource(const Logger1& logger, const QUrl &url, bool sync, QQuickWindow* qquickWindow);
     static const QUrl getSource(QQuickWindow* qquickWindow);
 #else    
     static QDeclarativeView* getQMLView(Session* session, const ViewId& viewId);

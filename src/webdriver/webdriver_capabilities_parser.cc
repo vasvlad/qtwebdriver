@@ -75,7 +75,7 @@ Capabilities::~Capabilities() { }
 
 CapabilitiesParser::CapabilitiesParser(
     const DictionaryValue* capabilities_dict,
-    const Logger& logger,
+    const Logger1& logger,
     Capabilities* capabilities)
     : dict_(capabilities_dict),
       logger_(logger),

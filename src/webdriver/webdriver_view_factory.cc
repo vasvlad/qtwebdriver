@@ -41,12 +41,15 @@ ViewFactory* ViewFactory::GetInstance() {
 	return instance;
 }
 
-void ViewFactory::CreateViewByClassName(const Logger& logger, const std::string& className, ViewHandle** view) const {
+void ViewFactory::CreateViewByClassName(const Logger1& logger, const std::string& className, ViewHandle** view) const {
+    logger.Log(kSevereLogLevel, "ViewFactory::CreateViewByClassName  111");
     CreateViewByClassName(logger, className, NULL, NULL, view);
 }
 
-void ViewFactory::CreateViewByClassName(const Logger& logger, const std::string& className,
+void ViewFactory::CreateViewByClassName(const Logger1& logger, const std::string& className,
                                         const Point* position, const Size* size, ViewHandle** view) const {
+
+    logger.Log(kSevereLogLevel, "ViewFactory::CreateViewByClassName  222");
 	CreatorsList::const_iterator creator;
 
 	logger.Log(kInfoLogLevel, "ViewFactory::CreateViewByClassName - " + className);
@@ -61,11 +64,11 @@ void ViewFactory::CreateViewByClassName(const Logger& logger, const std::string&
     logger.Log(kSevereLogLevel, "ViewFactory::CreateViewByClassName - cant create view.");
 }
 
-void ViewFactory::CreateViewForUrl(const Logger& logger, const std::string& url, ViewHandle** view) const {
+void ViewFactory::CreateViewForUrl(const Logger1& logger, const std::string& url, ViewHandle** view) const {
     CreateViewForUrl(logger, url, NULL, NULL, view);
 }
 
-void ViewFactory::CreateViewForUrl(const Logger& logger, const std::string& url,
+void ViewFactory::CreateViewForUrl(const Logger1& logger, const std::string& url,
                                    const Point* position, const Size* size, ViewHandle** view) const {
 
     CreatorsList::const_iterator creator;

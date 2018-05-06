@@ -148,7 +148,7 @@ void UrlCommandWrapper::ExecutePost(Response* const response) {
                 }
             }
 
-            typedef void (ViewFactory::*CreateViewForUrl)(const Logger&, const std::string&,
+            typedef void (ViewFactory::*CreateViewForUrl)(const Logger1&, const std::string&,
                                                           const Point*, const Size*, ViewHandle**) const;
             CreateViewForUrl createViewForUrl = static_cast<CreateViewForUrl>(&ViewFactory::CreateViewForUrl);
 

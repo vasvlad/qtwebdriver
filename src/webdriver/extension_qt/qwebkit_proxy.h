@@ -112,7 +112,7 @@ public slots:
 
 private:
     InMemoryLog browserLog;
-    Logger browserLogger;
+    Logger1 browserLogger;
 };
 
 class BrowserLogHandler : public QObject {

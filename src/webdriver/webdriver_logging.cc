@@ -303,13 +303,13 @@ void PerfLog::Log(LogLevel level, const base::Time &time, const std::string &mes
     InMemoryLog::Log(level, time, message);
 }
 
-Logger::Logger() : min_log_level_(kAllLogLevel) { }
+Logger1::Logger1() : min_log_level_(kAllLogLevel) { }
 
-Logger::Logger(LogLevel level) : min_log_level_(level) { }
+Logger1::Logger1(LogLevel level) : min_log_level_(level) { }
 
-Logger::~Logger() { }
+Logger1::~Logger1() { }
 
-void Logger::Log(LogLevel level, const std::string& message) const {
+void Logger1::Log(LogLevel level, const std::string& message) const {
     if (level < min_log_level_)
         return;
 
@@ -319,11 +319,11 @@ void Logger::Log(LogLevel level, const std::string& message) const {
     }
 }
 
-void Logger::AddHandler(LogHandler* log_handler) {
+void Logger1::AddHandler(LogHandler* log_handler) {
     handlers_.push_back(log_handler);
 }
 
-void Logger::set_min_log_level(LogLevel level) {
+void Logger1::set_min_log_level(LogLevel level) {
     min_log_level_ = level;
 }
 

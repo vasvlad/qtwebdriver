@@ -201,11 +201,11 @@ private:
 };
 
 /// Forwards logging messages to added logs.
-class Logger {
+class Logger1 {
 public:
-    Logger();
-    explicit Logger(LogLevel level);
-    ~Logger();
+    Logger1();
+    explicit Logger1(LogLevel level);
+    ~Logger1();
 
     void Log(LogLevel level, const std::string& message) const;
     void AddHandler(LogHandler* log_handler);

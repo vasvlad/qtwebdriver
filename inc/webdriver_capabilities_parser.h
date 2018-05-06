@@ -115,7 +115,7 @@ public:
     /// @param logger logger
     /// @param capabilities return value
     CapabilitiesParser(const base::DictionaryValue* capabilities_dict,
-                        const Logger& logger,
+                        const Logger1& logger,
                         Capabilities* capabilities);
     ~CapabilitiesParser();
 
@@ -133,7 +133,7 @@ private:
     const base::DictionaryValue* dict_;
 
     // Reference to the logger to use.
-    const Logger& logger_;
+    const Logger1& logger_;
 
     // A pointer to the capabilities to modify while parsing.
     Capabilities* caps_;

@@ -39,7 +39,7 @@ namespace webdriver {
 
 QWebViewCreator::QWebViewCreator() {}
 
-bool QWebViewCreator::CreateViewByClassName(const Logger& logger, const std::string& className,
+bool QWebViewCreator::CreateViewByClassName(const Logger1& logger, const std::string& className,
                                             const Point* position, const Size* size, ViewHandle** view) const {
 	ViewHandle* handle = NULL;
 
@@ -90,7 +90,7 @@ bool QWebViewCreator::CreateViewByClassName(const Logger& logger, const std::str
     return false;
 }
 
-bool QWebViewCreator::CreateViewForUrl(const Logger& logger, const std::string& url,
+bool QWebViewCreator::CreateViewForUrl(const Logger1& logger, const std::string& url,
                                        const Point* position, const Size* size, ViewHandle** view) const {
     Error* tmp_err = NULL;
     if (!QWebViewUtil::isUrlSupported(url, &tmp_err)) {
@@ -101,7 +101,7 @@ bool QWebViewCreator::CreateViewForUrl(const Logger& logger, const std::string& 
     return CreateViewByClassName(logger, "", position, size, view);
 }
 
-bool QWebViewCreator::ShowView(const Logger& logger, ViewHandle* viewHandle) const {
+bool QWebViewCreator::ShowView(const Logger1& logger, ViewHandle* viewHandle) const {
     QWidget* widget = (dynamic_cast<QViewHandle*>(viewHandle))->get();
 
     if (NULL != widget) {

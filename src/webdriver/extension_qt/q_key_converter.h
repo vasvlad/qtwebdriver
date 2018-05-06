@@ -14,7 +14,7 @@
 
 namespace webdriver {
 
-class Logger;
+class Logger1;
 
 class QKeyConverter {
 public:
@@ -26,7 +26,7 @@ public:
 	/// acts both an input and an output, however, only when the conversion
 	/// process is successful will |modifiers| be changed.
     static bool ConvertKeysToWebKeyEvents(const string16& client_keys,
-                               const Logger& logger,
+                               const Logger1& logger,
                                bool release_modifiers,
                                int* modifiers,
                                std::vector<QKeyEvent>* client_key_events,

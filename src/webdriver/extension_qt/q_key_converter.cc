@@ -160,7 +160,7 @@ bool QKeyConverter::KeyCodeFromShorthandKey(char16 key_utf16,
 
 
 bool QKeyConverter::ConvertKeysToWebKeyEvents(const string16& client_keys,
-                               const Logger& logger,
+                               const Logger1& logger,
                                bool release_modifiers,
                                int* modifiers,
                                std::vector<QKeyEvent>* client_key_events,

@@ -40,7 +40,7 @@ namespace webdriver {
 
 QWidgetViewCreator::QWidgetViewCreator() {}
 
-bool QWidgetViewCreator::CreateViewByClassName(const Logger& logger, const std::string& className,
+bool QWidgetViewCreator::CreateViewByClassName(const Logger1& logger, const std::string& className,
                                                const Point* position, const Size* size, ViewHandle** view) const {
 	ViewHandle* handle = NULL;	
 
@@ -110,7 +110,7 @@ bool QWidgetViewCreator::CreateViewByClassName(const Logger& logger, const std::
     return false;
 }
 
-bool QWidgetViewCreator::CreateViewForUrl(const Logger& logger, const std::string& url,
+bool QWidgetViewCreator::CreateViewForUrl(const Logger1& logger, const std::string& url,
                                           const Point* position, const Size* size, ViewHandle** view) const {
     if (!QWidgetViewUtil::isUrlSupported(url))
         return false;

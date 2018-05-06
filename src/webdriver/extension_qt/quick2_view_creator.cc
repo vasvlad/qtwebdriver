@@ -38,10 +38,12 @@ namespace webdriver {
 
 Quick2ViewCreator::Quick2ViewCreator() {}
 
-bool Quick2ViewCreator::CreateViewByClassName(const Logger& logger, const std::string& className,
+bool Quick2ViewCreator::CreateViewByClassName(const Logger1& logger, const std::string& className,
                                               const Point* position, const Size* size, ViewHandle** view) const {
 	ViewHandle* handle = NULL;
 
+    logger.Log(kWarningLogLevel, "Quick2ViewCreator::CreateViewByClassName");
+    qDebug()<<"Quick2ViewCreator::CreateViewByClassName"<<QString::fromStdString(className) ;
     if (factory.empty())
         return false;
 
@@ -107,7 +109,7 @@ bool Quick2ViewCreator::CreateViewByClassName(const Logger& logger, const std::s
     return false;
 }
 
-bool Quick2ViewCreator::CreateViewForUrl(const Logger& logger, const std::string& url,
+bool Quick2ViewCreator::CreateViewForUrl(const Logger1& logger, const std::string& url,
                                          const Point* position, const Size* size, ViewHandle** view) const {
     if (!QQmlViewUtil::isUrlSupported(url)) {
         return false;

@@ -25,7 +25,7 @@ class Error;
 class QProxyCapabilitiesParser {
 public:
     QProxyCapabilitiesParser(const base::DictionaryValue* proxy_dict,
-                        const Logger& logger,
+                        const Logger1& logger,
                         QNetworkProxy* proxy);
     ~QProxyCapabilitiesParser();
 
@@ -40,7 +40,7 @@ private:
     Error* ParseSystemProxy(const base::DictionaryValue* options);
 
     const base::DictionaryValue* dict_;
-    const Logger& logger_;
+    const Logger1& logger_;
 
     // A pointer to the capabilities to modify while parsing.
     QNetworkProxy* proxy_;

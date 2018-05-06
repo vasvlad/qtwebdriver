@@ -857,6 +857,8 @@ void Quick2ViewCmdExecutor::GetElementScreenShot(const ElementId& element, std::
 }
 
 void Quick2ViewCmdExecutor::ExecuteScript(const std::string& script, const base::ListValue* const args, base::Value** value, Error** error) {
+
+    qDebug()<< "Quick2ViewCmdExecutor"<<QString::fromStdString(view_id_.id());
     QQuickWindow* view = getView(view_id_, error);
     if (NULL == view)
         return;

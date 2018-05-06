@@ -39,7 +39,10 @@ namespace webdriver {
 
 QWindowViewCmdExecutor::QWindowViewCmdExecutor(Session* session, ViewId viewId)
     : ViewCmdExecutor(session, viewId) {
+     
+     session_->logger().Log(kWarningLogLevel, "QWindowViewCmdExecutor::QWindowViewCmdExecuto view("+viewId.id()+")");
      touchDevice.setCapabilities(QTouchDevice::Velocity);
+     session_->logger().Log(kWarningLogLevel, "QWindowViewCmdExecutor::QWindowViewCmdExecuto2 view("+viewId.id()+")");
 }
 
 QWindowViewCmdExecutor::~QWindowViewCmdExecutor() {

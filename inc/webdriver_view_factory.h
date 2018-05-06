@@ -91,7 +91,7 @@ public:
     /// @param[in] size - desired size
     /// @param[out] view created view.
     /// @return true if handled
-    virtual bool CreateViewByClassName(const Logger& logger, const std::string& className,
+    virtual bool CreateViewByClassName(const Logger1& logger, const std::string& className,
                                        const Point* position, const Size* size, ViewHandle** view) const = 0;
 
     /// creates new view that can handle specified url
@@ -101,7 +101,7 @@ public:
     /// @param[in] size - desired size
     /// @param[out] view created view. 
     /// @return true if handled
-    virtual bool CreateViewForUrl(const Logger& logger, const std::string& url,
+    virtual bool CreateViewForUrl(const Logger1& logger, const std::string& url,
                                   const Point* position, const Size* size, ViewHandle** view) const = 0;
 
 protected:
@@ -122,7 +122,7 @@ public:
     /// @param[in] logger
     /// @param[in] className requested class name
     /// @param[out] view created view.
-    void CreateViewByClassName(const Logger& logger, const std::string& className, ViewHandle** view) const;
+    void CreateViewByClassName(const Logger1& logger, const std::string& className, ViewHandle** view) const;
 
     /// creates new view of specified class
     /// @param[in] logger
@@ -130,14 +130,14 @@ public:
     /// @param[in] position desired window position
     /// @param[in] size desired window size
     /// @param[out] view created view.
-    void CreateViewByClassName(const Logger& logger, const std::string& className,
+    void CreateViewByClassName(const Logger1& logger, const std::string& className,
                                const Point* position, const Size* size, ViewHandle** view) const;
 
     /// creates new view that can handle specified url with specified window sixe and position
     /// @param[in] logger
     /// @param[in] url url to handle
     /// @param[out] view created view.
-    void CreateViewForUrl(const Logger& logger, const std::string& url, ViewHandle** view) const;
+    void CreateViewForUrl(const Logger1& logger, const std::string& url, ViewHandle** view) const;
 
     /// creates new view that can handle specified url with specified window sixe and position
     /// @param[in] logger
@@ -145,7 +145,7 @@ public:
     /// @param[in] position desired window position
     /// @param[in] size desired window size
     /// @param[out] view created view.
-    void CreateViewForUrl(const Logger& logger, const std::string& url,
+    void CreateViewForUrl(const Logger1& logger, const std::string& url,
                           const Point* position, const Size* size, ViewHandle** view) const;
 
     /// add new view's creator

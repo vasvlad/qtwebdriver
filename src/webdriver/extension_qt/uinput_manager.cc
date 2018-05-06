@@ -45,7 +45,7 @@ UInputManager::UInputManager()
     : _deviceDescriptor(0),
       _isReady(false)
 {
-    _logger = new Logger();
+    _logger = new Logger1();
 }
 
 UInputManager::~UInputManager()

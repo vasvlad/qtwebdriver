@@ -40,7 +40,7 @@ namespace webdriver {
 
 QQmlViewCreator::QQmlViewCreator() {}
 
-bool QQmlViewCreator::CreateViewByClassName(const Logger& logger, const std::string& className,
+bool QQmlViewCreator::CreateViewByClassName(const Logger1& logger, const std::string& className,
                                             const Point* position, const Size* size, ViewHandle** view) const {
 	ViewHandle* handle = NULL;
 
@@ -109,7 +109,7 @@ bool QQmlViewCreator::CreateViewByClassName(const Logger& logger, const std::str
     return false;
 }
 
-bool QQmlViewCreator::CreateViewForUrl(const Logger& logger, const std::string& url,
+bool QQmlViewCreator::CreateViewForUrl(const Logger1& logger, const std::string& url,
                                        const Point* position, const Size* size, ViewHandle** view) const {
     if (!QQmlViewUtil::isUrlSupported(url)) {
         return false;

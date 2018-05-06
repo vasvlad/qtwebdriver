@@ -157,7 +157,7 @@ public:
     const DictionaryValue* get_desired_caps() const { return desired_caps_.get(); }
     const DictionaryValue* get_required_caps() const { return required_caps_.get(); }
 
-    const Logger& logger() const;
+    const Logger1& logger() const;
 
     const FilePath& temp_dir() const;
 
@@ -242,7 +242,7 @@ private:
 
     scoped_ptr<InMemoryLog> session_log_;
     scoped_ptr<PerfLog> session_perf_log_;
-    Logger logger_;
+    Logger1 logger_;
 
     // session id
     const std::string id_;

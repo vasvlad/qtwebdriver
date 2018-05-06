@@ -398,7 +398,7 @@ void Session::set_mouse_position(const Point& point) {
     mouse_position_ = point;
 }
 
-const Logger& Session::logger() const {
+const Logger1& Session::logger() const {
     return logger_;
 }
 
