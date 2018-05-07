@@ -55,7 +55,7 @@ do
     export ANDROID_TOOL_PREFIX=arm-linux-androideabi
     export ANDROID_TARGET=android-10
     export ANDROID_TOOLCHAIN_PREFIX=arm-linux-androideabi
-    export ANDROID_NDK_HOST=linux-x86
+    export ANDROID_NDK_HOST=linux-x86_64
   else
     echo "We don't support platform " $arch
     exit 1
