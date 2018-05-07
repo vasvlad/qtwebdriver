@@ -63,7 +63,7 @@ do
 
   export QT_ROOT=$QT_DIR/android_$arch
 
-  export PREBUILD=$ANDROID_NDK_ROOT/toolchains/$ANDROID_TOOLCHAIN/prebuilt/linux-x86
+  export PREBUILD=$ANDROID_NDK_ROOT/toolchains/$ANDROID_TOOLCHAIN/prebuilt/linux-x86_64
   export BIN=$PREBUILD/bin
 
   export CXX=$BIN/$ANDROID_TOOL_PREFIX-g++
